@@ -50,6 +50,9 @@ pip install -r requirements.txt
 ### Start the Django development server:
 python manage.py runserver
 
+# copy and paste the port below in your browser
+ http://127.0.0.1:8000/
+
 
 ### Project Structure
 agrialert/
