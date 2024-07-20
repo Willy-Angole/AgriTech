@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{%load static%}
 <html lang="en">
 
   <head>
@@ -13,18 +14,11 @@
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
-
-    <link rel="stylesheet" type="text/css" href="static/css/font-awesome.css">
-
-    <link rel="stylesheet" href="static/css/templatemo-breezed.css">
-
-    <link rel="stylesheet" href="static/css/owl-carousel.css">
-
-    <link rel="stylesheet" href="static/css/lightbox.css">
-
-
-
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/templatemo-breezed.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lightbox.css' %}">
 
     </head>
     
@@ -49,7 +43,7 @@
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo">
-                            .New Era in Agriculture
+                            AgriAlert
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -90,7 +84,7 @@
           <!-- Item -->
           <div class="item">
             <div class="img-fill">
-                <img src="static/images/H2.jpg" alt="">
+                <img src="{% static 'images/H2.jpg' %}" alt="">
                 <div class="text-content">
                   <h3>Drones and other robots equipped with computer vision collect data points from the farms' exisiting crops. </h3>
                   <h5>AI.Revolution</h5>
@@ -102,7 +96,7 @@
           <!-- Item -->
           <div class="item">
             <div class="img-fill">
-                <img src="static/images/H3.jpg" alt="">
+                <img src="{% static 'images/H3.jpg' %}" alt="">
                 <div class="text-content">
                   <h3>Through machine learning, farmers can monitor crops' nutrient levels,
                       while also sheltering them from unpredictable and possibly damaging elements.</h3>
@@ -139,7 +133,7 @@
                     <div class="owl-carousel owl-theme">
                         <div class="item author-item">
                             <div class="member-thumb">
-                                <img src="static/images/home1.jpg" alt="">
+                                <img src="{% static 'images/home1.jpg' %}" alt="">
                                 <div class="hover-effect">
                                     <div class="hover-content">
                                         <ul>
@@ -151,7 +145,7 @@
                             </div>
                             <h4>Plant Diseas Detection </h4>
                             <span>Check for disease on the plant,and protect your plant from disease</span><br><br>
-                            <a href="/leaf_detection" class="main-button-icon">
+                            <a href="{% url  'leaf_detection' %} " class="main-button-icon">
                                 Learn More <i class="fa fa-arrow-right"> </i></a>
 
                         </div>
@@ -172,22 +166,6 @@
                             <a href="/input_crop_recommendation" class="main-button-icon">
                                 Learn More <i class="fa fa-arrow-right"> </i></a>
                         </div>
-<!--                        <div class="item author-item">-->
-<!--                            <div class="member-thumb">-->
-<!--                                <img src="static/images/home3.jpg" alt="">-->
-<!--                                <div class="hover-effect">-->
-<!--                                    <div class="hover-content">-->
-<!--                                        <ul>-->
-<!--                                            <li><a href="#"><i class="fa fa-bookmark"></i></a></li>-->
-<!--                                        </ul>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <h4>.03 Johnny Egg</h4>-->
-<!--                            <span>Digital Influencer</span><br><br>-->
-<!--                            <a href="#" class="main-button-icon">-->
-<!--                                Learn More <i class="fa fa-arrow-right"> </i></a>-->
-<!--                        </div>-->
 
 
                         
@@ -209,8 +187,8 @@
                             <h2>Feel free to keep in touch with us!</h2>
                         </div>
                         <ul class="contact-info">
-                            <li><img src="static/images/contact-info-01.png" alt="">+254745644687</li>
-                            <li><img src="static/images/contact-info-02.png" alt="">willyangole6101@gmail.com</li>
+                            <li><img src="{% static 'images/contact-info-01.png' %}" alt="">+254745644687</li>
+                            <li><img src="{% static 'images/contact-info-02.png' %}" alt="">willyangole6101@gmail.com</li>
                         </ul>
                     </div>
                 </div>
@@ -284,24 +262,24 @@
     
 
     <!-- jQuery -->
-    <script src="static/js/jquery-2.1.0.min.js"></script>
+    <script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
 
     <!-- Bootstrap -->
-    <script src="static/js/popper.js"></script>
-    <script src="static/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
     <!-- Plugins -->
-    <script src="static/js/owl-carousel.js"></script>
-    <script src="static/js/scrollreveal.min.js"></script>
-    <script src="static/js/waypoints.min.js"></script>
-    <script src="static/js/jquery.counterup.min.js"></script>
-    <script src="static/js/imgfix.min.js"></script>
-    <script src="static/js/slick.js"></script>
-    <script src="static/js/lightbox.js"></script>
-    <script src="static/js/isotope.js"></script>
+    <script src="{% static 'js/owl-carousel.js' %}"></script>
+    <script src="{% static 'js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/imgfix.min.js' %}"></script>
+    <script src="{% static 'js/slick.js' %}"></script>
+    <script src="{% static 'js/lightbox.js' %}"></script>
+    <script src="{% static 'js/isotope.js' %}"></script>
     
     <!-- Global Init -->
-    <script src="static/js/custom.js"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
 
     <script>
 

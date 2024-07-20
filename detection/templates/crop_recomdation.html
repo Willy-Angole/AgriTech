@@ -1,15 +1,15 @@
 <!DOCTYPE html>
+{%load static%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crop Recomendation system</title>
-
     <!-- Font Icon -->
-    <link rel="stylesheet" href="{{url_for('static',filename='material-design-iconic-font.min.css')}}">
+    <link rel="stylesheet" href="{% static 'material-design-iconic-font.min.css' %}">
     <!-- Main css -->
-    <link rel="stylesheet" href="{{url_for('static',filename='style_crop_remendation.css')}}">
+    <link rel="stylesheet" href="{% static 'style_crop_remendation.css' %}">
 
 
 </head>
@@ -22,7 +22,7 @@
             <div class="signup-content">
                 <div class="signup-img">
 
-                    <img src="static/images/cr_1.jpg" alt="">
+                    <img src="{% static '/images/cr_1.jpg' %}" alt="">
                 </div>
                 <div class="signup-form">
                     <form action="/crop_recommendation" method="POST" class="register-form" id="register-form">
@@ -152,7 +152,7 @@
     </div>
 
     <!-- JS -->
-    <script src="static/crop_recomendation.js"></script>
+    <script src="{% static 'crop_recomendation.js' %}"></script>
 
 
 

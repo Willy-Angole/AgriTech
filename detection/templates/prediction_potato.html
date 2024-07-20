@@ -1,14 +1,15 @@
 <!DOCTYPE html>
+{%load static%}
 <html lang="en">
     <head>
         <title>Potato Plant Leaf Disease Detection</title>
         <meta charset="UTF-8">
 <!--        <link href="static/style_index.css" rel="stylesheet">-->
-        <link rel="stylesheet" href="{{url_for('static',filename='style_potato.css')}}">
+        <link rel="stylesheet" href="{% static 'style_potato.css' %}">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Potato Plant Leaf Detection</title>
-    <link  rel="stylesheet" href="{{url_for('static',filename='popup.css')}}">
+    <link rel="stylesheet" href="{% static 'popup.css' %}">
 
     </head>
     <body>
@@ -35,7 +36,7 @@
 
     <div class="popup">
         <div class="content">
-            <h1 id="Heading"><span>Warnining</span><br>>You just need to give photos of Potato Plants.</h1>
+            <h1 id="Heading"><span>Warnining</span><br>You just need to give photos of Potato Plants.</h1>
             <button onclick="toggle()" class="submitId2"> Ok!!!</button>
         </div>
     </div>
