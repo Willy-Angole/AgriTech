@@ -29,6 +29,9 @@ git clone git@github.com:Willy-Angole/AgriTech.git
 
 cd agrialert
 
+make sure to create a branch to avoid issues with the main branch, use
+git checkout -b "your branch name"
+
 ### Create a virtual environment
 python -m venv venv
 
