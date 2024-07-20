@@ -25,7 +25,8 @@ Ensure you have the following installed on your machine:
 Clone the project repository from GitHub to your local machine:
 
 ### Git bash or Terminal for mac/linux users
-git clone https://github.com/yourusername/agrialert.git
+git clone git@github.com:Willy-Angole/AgriTech.git
+
 cd agrialert
 
 ### Create a virtual environment
