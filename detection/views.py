@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import ImageUploadForm
 from django.http import HttpResponse
 import os
 import cv2
@@ -20,16 +21,20 @@ model_tomato = load_model(os.path.join(MODEL_PATH, 'AI_Tomato_model_inception.h5
 COUNT = 0
 
 def home(request):
-    return render(request, 'index.html')
+    return render(request, 'index-3-one-page.html')
 
 def leaf_detection(request):
     return render(request, 'leaf_detection.html')
+def packages(request):
+    return render(request, 'packages.html')
+def not_found(request):
+    return render(request, '404.html')
 
 def inputcotton(request):
     return render(request, 'prediction_cotton.html')
 
 def inputcorn(request):
-    return render(request, 'prediction_Corn.html')
+    return render(request, 'upload_image.html')
 
 def inputgrape(request):
     return render(request, 'prediction_Grape.html')
@@ -228,4 +233,25 @@ def crop_recommendation(request):
 def load_img(request):
     global COUNT
     return send_from_directory(settings.MEDIA_ROOT + '/img', "{}.jpg".format(COUNT-1))
+
+#image uploading
+
+def scan_image(request):
+    if request.method == 'POST':
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            # Process the uploaded image here
+            image = form.cleaned_data['image']
+            # Example: pass the image to your model and get the result
+            result = process_image(image)
+            return render(request, 'result.html', {'result': result})
+    else:
+        form = ImageUploadForm()
+    return render(request, 'upload_image.html', {'form': form})
+
+def process_image(image):
+    # Add your image processing logic here
+    # For example, load the image with OpenCV and pass it to your model
+    return "Disease identified: Example Disease"
+
 

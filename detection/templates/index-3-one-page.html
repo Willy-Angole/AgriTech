@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriAlert </title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicons/apple-touch-icon.png' %}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicons/favicon-32x32.png' %}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static  'images/favicons/favicon-16x16.png' %}" />
+    <link rel="manifest" href="{% static 'images/favicons/site.webmanifest' %}" />
+    <meta name="description" content="AgriAlert" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Rubik:ital,wght@0,300..900;1,300..900&amp;display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{% static 'vendors/bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/bootstrap-select/bootstrap-select.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/animate/animate.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/fontawesome/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/icofont/icofont.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/jquery-ui/jquery-ui.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/jarallax/jarallax.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/jquery-magnific-popup/jquery.magnific-popup.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/nouislider/nouislider.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/nouislider/nouislider.pips.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/tiny-slider/tiny-slider.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/slick/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/alefox-icons/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/css/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/css/owl.theme.default.min.css' %}" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="{% static 'css/alefox.css' %}" />
+</head>
+
+<body class="custom-cursor">
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <div class="preloader">
+        <div class="preloader__image" style="background-image: url(assets/images/loader.png);"></div>
+    </div>
+    <!-- /.preloader -->
+    <div class="page-wrapper">
+        <header class="main-header main-header--three sticky-header sticky-header--one-page">
+            <div class="main-header__inner">
+                <div class="main-header__logo">
+                    <a href="index.html">
+                        <!-- <img src="assets/images/logo-light.png" alt="Alefox HTML" width="147"> -->
+                        <h1 style="color: white;">AgriAlert</h1>
+                    </a>
+                </div><!-- /.main-header__logo -->
+                <nav class="main-header__nav main-menu">
+                    <ul class="main-menu__list one-page-scroll-menu">
+                        <li class="scrollToLink"><a href="#home">Home</a></li>
+                        <li class="scrollToLink"><a href="#about">About</a></li>
+                        <li class="scrollToLink"><a href="#services">Services</a></li>
+                        <li class="scrollToLink"><a href="#project">Project</a></li>
+                        <li class="scrollToLink"><a href="#blog">Blog</a></li>
+                        <li class="scrollToLink"><a href="{% url 'packages' %}">UseAgriAlert</a></li>
+                    
+                    </ul>
+                </nav><!-- /.main-header__nav -->
+                <div class="main-header__right">
+                    <div class="mobile-nav__btn mobile-nav__toggler">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div><!-- /.mobile-nav__toggler -->
+                    <a href="#" class="search-toggler main-header__search">
+                        <i class="icon-magnifying-glass" aria-hidden="true"></i>
+                        <span class="sr-only">Search</span>
+                    </a><!-- /.search-toggler -->
+                    <a href="cart.html" class="main-header__cart">
+                        <i class="icon-shopping-cart" aria-hidden="true"></i>
+                        <span class="main-header__cart__count">02</span>
+                        <span class="sr-only">Search</span>
+                    </a><!-- /.search-toggler -->
+                </div><!-- /.main-header__right -->
+            </div><!-- /.main-header__inner -->
+        </header><!-- /.main-header -->
+
+        <!-- main-slider-start -->
+        <section class="main-slider-three" id="home">
+            <div class="main-slider-three__carousel alefox-owl__carousel owl-carousel" data-owl-options='{
+		"loop": true,
+		"animateOut": "fadeOut",
+		"animateIn": "fadeIn",
+		"items": 1,
+		"autoplay": true,
+		"autoplayTimeout": 7000,
+		"smartSpeed": 1000,
+		"nav": false,
+        "navText": ["<span class=\"icon-left-arrow\"></span>","<span class=\"icon-right-arrow\"></span>"],
+		"dots": true,
+		"margin": 0
+	    }'>
+                <div class="item">
+                    <div class="main-slider-three__item">
+                        <div class="main-slider-three__bg" style="background-image: url(assets/images/backgrounds/slider-3-1.jpg);">
+                            <div class="main-slider-three__bg__color"></div>
+                            <div class="main-slider-three__bg__color"></div>
+                            <div class="main-slider-three__bg__color"></div>
+                            <div class="main-slider-three__bg__color"></div>
+                            <div class="main-slider-three__bg__color"></div>
+                            <div class="main-slider-three__bg__color"></div>
+                        </div>
+                        <div class="main-slider-three__shape-one">
+                            <img src="{% static 'images/shapes/slider-3-shape-1.png' %}" alt="alefox">
+                        </div>
+                        <div class="main-slider-three__shape-two">
+                            <img src="{ static 'images/shapes/slider-3-shape-2.png' %}" alt="alefox">
+                        </div>
+                        <div class="container">
+                            <div class="main-slider-three__content text-center">
+                                <h5 class="main-slider-three__sub-title">100% Organice Food</h5><!-- slider-sub-title -->
+                                <h2 class="main-slider-three__title">
+                                    Best Organic Firms<br> Food of Health<span>y</span>
+                                </h2><!-- slider-title -->
+                                <div class="main-slider-three__text">
+                                    <p class="main-slider-three__text__one">
+                                        Food can only be as strong as our people & because of team<br> have designed game changing products.
+                                    </p>
+                                </div><!-- slider-text -->
+                                <div class="main-slider-three__btn">
+                                    <a href="{% url 'not_found' %}" class="alefox-btn">
+                                        <span class="alefox-btn__item"></span>
+                                        <span class="alefox-btn__item"></span>
+                                        <span class="alefox-btn__item"></span>
+                                        <span class="alefox-btn__item"></span>
+                                        Discover More
+                                    </a><!-- slider-btn -->
+                                    <div class="main-slider-three__btn__two">
+                                        <a href="contact.html" class="alefox-btn">
+                                            <span class="alefox-btn__item"></span>
+                                            <span class="alefox-btn__item"></span>
+                                            <span class="alefox-btn__item"></span>
+                                            <span class="alefox-btn__item"></span>
+                                            Contact Now
+                                        </a><!-- slider-btn -->
+                                    </div>
+                                </div><!-- slider-btn -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="main-slider-three__item">
+                        <div class="main-slider-three__bg" style="background-image: url(assets/images/backgrounds/slider-3-2.jpg);">
+                            <div class="main-slider-three__bg__color"></div>
+                            <div class="main-slider-three__bg__color"></div>
+                            <div class="main-slider-three__bg__color"></div>
+                            <div class="main-slider-three__bg__color"></div>
+                            <div class="main-slider-three__bg__color"></div>
+                            <div class="main-slider-three__bg__color"></div>
+                        </div>
+                        <div class="main-slider-three__shape-one">
+                            <img src="{% static 'images/shapes/slider-3-shape-1.png' %}" alt="alefox">
+                        </div>
+                        <div class="main-slider-three__shape-two">
+                            <img src="{% static 'images/shapes/slider-3-shape-2.png' %}" alt="alefox">
+                        </div>
+                        <div class="container">
+                            <div class="main-slider-three__content text-center">
+                                <h5 class="main-slider-three__sub-title">100% Organice Food</h5><!-- slider-sub-title -->
+                                <h2 class="main-slider-three__title">
+                                    Best Organic Firms<br> Food of Health<span>y</span>
+                                </h2><!-- slider-title -->
+                                <div class="main-slider-three__text">
+                                    <p class="main-slider-three__text__one">
+                                        Food can only be as strong as our people & because of team<br> have designed game changing products.
+                                    </p>
+                                </div><!-- slider-text -->
+                                <div class="main-slider-three__btn">
+                                    <a href="products.html" class="alefox-btn">
+                                        <span class="alefox-btn__item"></span>
+                                        <span class="alefox-btn__item"></span>
+                                        <span class="alefox-btn__item"></span>
+                                        <span class="alefox-btn__item"></span>
+                                        Discover More
+                                    </a><!-- slider-btn -->
+                                    <div class="main-slider-three__btn__two">
+                                        <a href="contact.html" class="alefox-btn">
+                                            <span class="alefox-btn__item"></span>
+                                            <span class="alefox-btn__item"></span>
+                                            <span class="alefox-btn__item"></span>
+                                            <span class="alefox-btn__item"></span>
+                                            Contact Now
+                                        </a><!-- slider-btn -->
+                                    </div>
+                                </div><!-- slider-btn -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="main-slider-three__item">
+                        <div class="main-slider-three__bg" style="background-image: url(assets/images/backgrounds/slider-3-3.jpg);">
+                            <div class="main-slider-three__bg__color"></div>
+                            <div class="main-slider-three__bg__color"></div>
+                            <div class="main-slider-three__bg__color"></div>
+                            <div class="main-slider-three__bg__color"></div>
+                            <div class="main-slider-three__bg__color"></div>
+                            <div class="main-slider-three__bg__color"></div>
+                        </div>
+                        <div class="main-slider-three__shape-one">
+                            <img src="{% static 'images/shapes/slider-3-shape-1.png' %}" alt="alefox">
+                        </div>
+                        <div class="main-slider-three__shape-two">
+                            <img src="{% static 'images/shapes/slider-3-shape-2.png' %}" alt="alefox">
+                        </div>
+                        <div class="container">
+                            <div class="main-slider-three__content text-center">
+                                <h5 class="main-slider-three__sub-title">100% Organice Food</h5><!-- slider-sub-title -->
+                                <h2 class="main-slider-three__title">
+                                    Best Organic Firms<br> Food of Health<span>y</span>
+                                </h2><!-- slider-title -->
+                                <div class="main-slider-three__text">
+                                    <p class="main-slider-three__text__one">
+                                        Food can only be as strong as our people & because of team<br> have designed game changing products.
+                                    </p>
+                                </div><!-- slider-text -->
+                                <div class="main-slider-three__btn">
+                                    <a href="products.html" class="alefox-btn">
+                                        <span class="alefox-btn__item"></span>
+                                        <span class="alefox-btn__item"></span>
+                                        <span class="alefox-btn__item"></span>
+                                        <span class="alefox-btn__item"></span>
+                                        Discover More
+                                    </a><!-- slider-btn -->
+                                    <div class="main-slider-three__btn__two">
+                                        <a href="contact.html" class="alefox-btn">
+                                            <span class="alefox-btn__item"></span>
+                                            <span class="alefox-btn__item"></span>
+                                            <span class="alefox-btn__item"></span>
+                                            <span class="alefox-btn__item"></span>
+                                            Contact Now
+                                        </a><!-- slider-btn -->
+                                    </div>
+                                </div><!-- slider-btn -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- main-slider-end -->
+
+        <section class="feature-two">
+            <div class="container">
+                <div class="row gutter-y-30">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="00ms">
+                        <div class="feature-two__item text-center">
+                            <div class="feature-two__item__icon-bg"><span class="icon-fertilizer"></span></div>
+                            <div class="feature-two__item__shape" style="background-image: url(assets/images/shapes/feature-2-shape.png);"></div>
+                            <div class="feature-two__item__icon"><span class="icon-fertilizer"></span></div>
+                            <h3 class="feature-two__item__title">Agriculture Products</h3>
+                            <p class="feature-two__item__text">
+                                Food error sit voluptatem accusantium laudanti totam eaque ipsa uae ab illo inventore veritatis
+                            </p>
+                        </div><!-- item -->
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="feature-two__item text-center">
+                            <div class="feature-two__item__icon-bg"><span class="icon-salad"></span></div>
+                            <div class="feature-two__item__shape" style="background-image: url(assets/images/shapes/feature-2-shape.png);"></div>
+                            <div class="feature-two__item__icon"><span class="icon-salad"></span></div>
+                            <h3 class="feature-two__item__title">Organic Products</h3>
+                            <p class="feature-two__item__text">
+                                Food error sit voluptatem accusantium laudanti totam eaque ipsa uae ab illo inventore veritatis
+                            </p>
+                        </div><!-- item -->
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="feature-two__item text-center">
+                            <div class="feature-two__item__icon-bg"><span class="icon-vegetable"></span></div>
+                            <div class="feature-two__item__shape" style="background-image: url(assets/images/shapes/feature-2-shape.png);"></div>
+                            <div class="feature-two__item__icon"><span class="icon-vegetable"></span></div>
+                            <h3 class="feature-two__item__title">Food Vegetaables</h3>
+                            <p class="feature-two__item__text">
+                                Food error sit voluptatem accusantium laudanti totam eaque ipsa uae ab illo inventore veritatis
+                            </p>
+                        </div><!-- item -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-three" id="about">
+            <div class="about-three__shape" style="background-image: url(assets/images/resources/about-3-shape-1.png);"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="about-three__image wow fadeInLeft" data-wow-delay="200ms">
+                            <img src="{% static 'images/resources/about-3-1.jpg' %}" alt="alefox">
+                            <div class="about-three__image__two">
+                                <img src="{% static 'images/shapes/about-3-brand.png' %}" alt="alefox">
+                            </div>
+                        </div><!-- /.about-three__image -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="300ms">
+                        <div class="about-three__content">
+                            <div class="sec-title text-left">
+
+                                <h6 class="sec-title__tagline bw-split-in-right"><span class="sec-title__tagline__left-leaf" style="background-image: url(assets/images/shapes/leaf.png);"></span>Our About Us<span class="sec-title__tagline__right-leaf" style="background-image: url(assets/images/shapes/leaf.png);"></span></h6><!-- /.sec-title__tagline -->
+
+                                <h3 class="sec-title__title bw-split-in-left">This Organic of Agriculture About Food Market.</h3><!-- /.sec-title__title -->
+                            </div><!-- /.sec-title -->
+                            <p class="about-three__content__text">
+                                Organic address a range of simply application and infrastructure this of passages of available, but the
+                                majority have suffered poor alteration in some form.
+                            </p>
+                            <div class="about-three__content__quote">
+                                <i class="icon-farmer-two"></i>
+                                There are many variations of passages of available but the have suffered alteration in some form.
+                            </div>
+                            <div class="about-three__content__border"></div>
+                            <ul class="about-three__content__list">
+                                <li><span class="icon-check-mark"></span>There are many variations of pass available.</li>
+                                <li><span class="icon-check-mark"></span>Organic Return Policy Money back guarantee</li>
+                                <li><span class="icon-check-mark"></span>Atiam rhoncus sit amet adip scing sed ipsum.</li>
+                            </ul>
+                            <a href="about.html" class="alefox-btn">
+                                <span class="alefox-btn__item"></span>
+                                <span class="alefox-btn__item"></span>
+                                <span class="alefox-btn__item"></span>
+                                <span class="alefox-btn__item"></span>
+                                About More
+                            </a>
+                        </div><!-- /.why-choose-two__content -->
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.about-three -->
+
+        <section class="funfact-one">
+            <div class="container">
+                <ul class="list-unstyled funfact-one__list">
+                    <li>
+                        <div class="funfact-one__list__icon"><span class="icon-agronomy"></span></div>
+                        <div class="funfact-one__list__content">
+                            <h5 class="funfact-one__list__number count-box"><span class="count-text" data-stop="99" data-speed="1500"></span>M+</h5>
+                            <p class="funfact-one__list__text">Healthy Food</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="funfact-one__list__icon"><span class="icon-management"></span></div>
+                        <div class="funfact-one__list__content">
+                            <h5 class="funfact-one__list__number count-box"><span class="count-text" data-stop="68" data-speed="1500"></span>K+</h5>
+                            <p class="funfact-one__list__text">Expert Team</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="funfact-one__list__icon"><span class="icon-sustainability"></span></div>
+                        <div class="funfact-one__list__content">
+                            <h5 class="funfact-one__list__number count-box"><span class="count-text" data-stop="789" data-speed="1500"></span>+</h5>
+                            <p class="funfact-one__list__text">Food Now</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="funfact-one__list__icon"><span class="icon-save-energy"></span></div>
+                        <div class="funfact-one__list__content">
+                            <h5 class="funfact-one__list__number count-box"><span class="count-text" data-stop="424" data-speed="1500"></span>+</h5>
+                            <p class="funfact-one__list__text">Food Organic</p>
+                        </div>
+                    </li>
+                </ul>
+            </div><!-- /.container -->
+        </section><!-- /.funfact-one -->
+
+        <!-- Service Start -->
+        <section class="service-three" id="services">
+            <div class="service-three__bg" style="background-image: url(assets/images/shapes/service-bg-3-shape.png);"></div>
+            <div class="service-three__shape" style="background-image: url(assets/images/resources/service-2-shape-2.png);"></div>
+            <div class="container">
+                <div class="sec-title text-center">
+
+                    <h6 class="sec-title__tagline bw-split-in-right"><span class="sec-title__tagline__left-leaf" style="background-image: url(assets/images/shapes/leaf.png);"></span>Our Best Services<span class="sec-title__tagline__right-leaf" style="background-image: url(assets/images/shapes/leaf.png);"></span></h6><!-- /.sec-title__tagline -->
+
+                    <h3 class="sec-title__title bw-split-in-left">Services We Offer</h3><!-- /.sec-title__title -->
+                </div><!-- /.sec-title -->
+                <div class="service-three__carousel alefox-owl__carousel alefox-owl__carousel--with-shadow alefox-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
+				"items": 1,
+				"margin": 30,
+				"loop": false,
+				"smartSpeed": 700,
+				"nav": false,
+				"navText": ["<span class=\"icofont-bubble-left\"></span>","<span class=\"icofont-bubble-righ\"></span>"],
+				"dots": true,
+				"autoplay": false,
+				"responsive": {
+					"0": {
+						"items": 1
+					},
+					"768": {
+						"items": 2
+					},
+					"992": {
+						"items": 3
+					}
+				}
+			}'>
+                    <div class="item">
+                        <div class="service-three__item wow fadeInUp" data-wow-delay="00ms">
+                            <div class="service-three__item__image">
+                                <img src="{% static 'images/resources/service-3-1.jpg' %}" alt="alefox">
+                            </div>
+                            <div class="service-three__item__content">
+                                <div class="service-three__item__icon">
+                                    <span class="icon-salad"></span>
+                                </div><!-- /.service-icon -->
+                                <h3 class="service-three__item__title">
+                                    <a href="service-d-fresh.html">Weather Prediction</a>
+                                </h3><!-- /.service-title -->
+                                <p class="service-three__item__text">
+                                    We use Technology to give weather preadictions for better farming seaons.
+                                </p><!-- /.service-text -->
+                                <a href="service-d-fresh.html" class="service-three__item__link">
+                                    <i class="icofont-arrow-up"></i>
+                                </a>
+                            </div>
+                            <div class="service-three__item__shape" style="background-image: url(assets/images/shapes/service-3-shape.png);"></div>
+                        </div><!-- /.service-item -->
+                    </div>
+                    <div class="item">
+                        <div class="service-three__item wow fadeInUp" data-wow-delay="100ms">
+                            <div class="service-three__item__image">
+                                <img src="{% static 'images/resources/service-3-2.jpg' %}" alt="alefox">
+                            </div>
+                            <div class="service-three__item__content">
+                                <div class="service-three__item__icon">
+                                    <span class="icon-management"></span>
+                                </div><!-- /.service-icon -->
+                                <h3 class="service-three__item__title">
+                                    <a href="service-d-farming.html">AgriTech Experise</a>
+                                </h3><!-- /.service-title -->
+                                <p class="service-three__item__text">
+                                    Provide Agricultural technology across The globe through use of AI/ML .
+                                </p><!-- /.service-text -->
+                                <a href="service-d-farming.html" class="service-three__item__link">
+                                    <i class="icofont-arrow-up"></i>
+                                </a>
+                            </div>
+                            <div class="service-three__item__shape" style="background-image: url(assets/images/shapes/service-3-shape.png);"></div>
+                        </div><!-- /.service-item -->
+                    </div>
+                    <div class="item">
+                        <div class="service-three__item wow fadeInUp" data-wow-delay="200ms">
+                            <div class="service-three__item__image">
+                                <img src="{% static 'images/resources/service-3-3.jpg' %}" alt="alefox">
+                            </div>
+                            <div class="service-three__item__content">
+                                <div class="service-three__item__icon">
+                                    <span class="icon-agronomy"></span>
+                                </div><!-- /.service-icon -->
+                                <h3 class="service-three__item__title">
+                                    <a href="service-d-organic.html">Organic Product</a>
+                                </h3><!-- /.service-title -->
+                                <p class="service-three__item__text">
+                                    Well maintained Agricultural products with high yied.
+                                </p><!-- /.service-text -->
+                                <a href="service-d-organic.html" class="service-three__item__link">
+                                    <i class="icofont-arrow-up"></i>
+                                </a>
+                            </div>
+                            <div class="service-three__item__shape" style="background-image: url(assets/images/shapes/service-3-shape.png);"></div>
+                        </div><!-- /.service-item -->
+                    </div>
+                    <div class="item">
+                        <div class="service-three__item wow fadeInUp" data-wow-delay="00ms">
+                            <div class="service-three__item__image">
+                                <img src="{% static 'images/resources/service-3-1.jpg' %}" alt="alefox">
+                            </div>
+                            <div class="service-three__item__content">
+                                <div class="service-three__item__icon">
+                                    <span class="icon-salad"></span>
+                                </div><!-- /.service-icon -->
+                                <h3 class="service-three__item__title">
+                                    <a href="service-d-fresh.html">Always Fresh</a>
+                                </h3><!-- /.service-title -->
+                                <p class="service-three__item__text">
+                                    With schools closed in NSW and Victoria, and childcare workers in Food places.
+                                </p><!-- /.service-text -->
+                                <a href="service-d-fresh.html" class="service-three__item__link">
+                                    <i class="icofont-arrow-up"></i>
+                                </a>
+                            </div>
+                            <div class="service-three__item__shape" style="background-image: url(assets/images/shapes/service-3-shape.png);"></div>
+                        </div><!-- /.service-item -->
+                    </div>
+                    <div class="item">
+                        <div class="service-three__item wow fadeInUp" data-wow-delay="100ms">
+                            <div class="service-three__item__image">
+                                <img src="{% static 'images/resources/service-3-2.jpg' %}" alt="alefox">
+                            </div>
+                            <div class="service-three__item__content">
+                                <div class="service-three__item__icon">
+                                    <span class="icon-management"></span>
+                                </div><!-- /.service-icon -->
+                                <h3 class="service-three__item__title">
+                                    <a href="service-d-farming.html">Organic Solutions</a>
+                                </h3><!-- /.service-title -->
+                                <p class="service-three__item__text">
+                                    With schools closed in NSW and Victoria, and childcare workers in Food places.
+                                </p><!-- /.service-text -->
+                                <a href="service-d-farming.html" class="service-three__item__link">
+                                    <i class="icofont-arrow-up"></i>
+                                </a>
+                            </div>
+                            <div class="service-three__item__shape" style="background-image: url(assets/images/shapes/service-3-shape.png);"></div>
+                        </div><!-- /.service-item -->
+                    </div>
+                    <div class="item">
+                        <div class="service-three__item wow fadeInUp" data-wow-delay="200ms">
+                            <div class="service-three__item__image">
+                                <img src="{% static 'images/resources/service-3-3.jpg' %}" alt="alefox">
+                            </div>
+                            <div class="service-three__item__content">
+                                <div class="service-three__item__icon">
+                                    <span class="icon-agronomy"></span>
+                                </div><!-- /.service-icon -->
+                                <h3 class="service-three__item__title">
+                                    <a href="service-d-organic.html">Organic Product</a>
+                                </h3><!-- /.service-title -->
+                                <p class="service-three__item__text">
+                                    With schools closed in NSW and Victoria, and childcare workers in Food places.
+                                </p><!-- /.service-text -->
+                                <a href="service-d-organic.html" class="service-three__item__link">
+                                    <i class="icofont-arrow-up"></i>
+                                </a>
+                            </div>
+                            <div class="service-three__item__shape" style="background-image: url(assets/images/shapes/service-3-shape.png);"></div>
+                        </div><!-- /.service-item -->
+                    </div>
+                    <div class="item">
+                        <div class="service-three__item wow fadeInUp" data-wow-delay="00ms">
+                            <div class="service-three__item__image">
+                                <img src="{% static 'images/resources/service-3-1.jpg' %}" alt="alefox">
+                            </div>
+                            <div class="service-three__item__content">
+                                <div class="service-three__item__icon">
+                                    <span class="icon-salad"></span>
+                                </div><!-- /.service-icon -->
+                                <h3 class="service-three__item__title">
+                                    <a href="service-d-fresh.html">Always Fresh</a>
+                                </h3><!-- /.service-title -->
+                                <p class="service-three__item__text">
+                                    With schools closed in NSW and Victoria, and childcare workers in Food places.
+                                </p><!-- /.service-text -->
+                                <a href="service-d-fresh.html" class="service-three__item__link">
+                                    <i class="icofont-arrow-up"></i>
+                                </a>
+                            </div>
+                            <div class="service-three__item__shape" style="background-image: url(assets/images/shapes/service-3-shape.png);"></div>
+                        </div><!-- /.service-item -->
+                    </div>
+                    <div class="item">
+                        <div class="service-three__item wow fadeInUp" data-wow-delay="100ms">
+                            <div class="service-three__item__image">
+                                <img src="{% static 'images/resources/service-3-2.jpg' %}" alt="alefox">
+                            </div>
+                            <div class="service-three__item__content">
+                                <div class="service-three__item__icon">
+                                    <span class="icon-management"></span>
+                                </div><!-- /.service-icon -->
+                                <h3 class="service-three__item__title">
+                                    <a href="service-d-farming.html">Organic Solutions</a>
+                                </h3><!-- /.service-title -->
+                                <p class="service-three__item__text">
+                                    With schools closed in NSW and Victoria, and childcare workers in Food places.
+                                </p><!-- /.service-text -->
+                                <a href="service-d-farming.html" class="service-three__item__link">
+                                    <i class="icofont-arrow-up"></i>
+                                </a>
+                            </div>
+                            <div class="service-three__item__shape" style="background-image: url(assets/images/shapes/service-3-shape.png);"></div>
+                        </div><!-- /.service-item -->
+                    </div>
+                    <div class="item">
+                        <div class="service-three__item wow fadeInUp" data-wow-delay="200ms">
+                            <div class="service-three__item__image">
+                                <img src="{% static 'images/resources/service-3-3.jpg' %}" alt="alefox">
+                            </div>
+                            <div class="service-three__item__content">
+                                <div class="service-three__item__icon">
+                                    <span class="icon-agronomy"></span>
+                                </div><!-- /.service-icon -->
+                                <h3 class="service-three__item__title">
+                                    <a href="service-d-organic.html">Organic Product</a>
+                                </h3><!-- /.service-title -->
+                                <p class="service-three__item__text">
+                                    With schools closed in NSW and Victoria, and childcare workers in Food places.
+                                </p><!-- /.service-text -->
+                                <a href="service-d-organic.html" class="service-three__item__link">
+                                    <i class="icofont-arrow-up"></i>
+                                </a>
+                            </div>
+                            <div class="service-three__item__shape" style="background-image: url(assets/images/shapes/service-3-shape.png);"></div>
+                        </div><!-- /.service-item -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Service End -->
+
+        <section class="cta-five">
+            <div class="container">
+                <div class="cta-five__wrapper">
+                    <div class="row">
+                        <div class="col-lg-6 d-flex align-items-center wow fadeInLeft" data-wow-delay="100ms">
+                            <div class="cta-five__content">
+                                <div class="sec-title text-left">
+
+                                    <h6 class="sec-title__tagline bw-split-in-right"><span class="sec-title__tagline__left-leaf" style="background-image: url(assets/images/shapes/leaf.png);"></span>Organic Food soluton<span class="sec-title__tagline__right-leaf" style="background-image: url(assets/images/shapes/leaf.png);"></span></h6><!-- /.sec-title__tagline -->
+
+                                    <h3 class="sec-title__title bw-split-in-left">Food Organic Service This Product of Solution.</h3><!-- /.sec-title__title -->
+                                </div><!-- /.sec-title -->
+                                <ul class="cta-five__content__list">
+                                    <li><i class="icofont-pumpkin"></i>
+                                        <h3 class="cta-five__content__list__title">Pumpkin</h3><span>Cavitae ullamcorper food solution</span>
+                                    </li>
+                                    <li><i class="icofont-artichoke"></i>
+                                        <h3 class="cta-five__content__list__title">Artichok</h3><span>Curabitur vitae ullamcorper food</span>
+                                    </li>
+                                    <li><i class="icofont-onion"></i>
+                                        <h3 class="cta-five__content__list__title">Onion</h3><span>There are many variations of passages</span>
+                                    </li>
+                                    <li><i class="icofont-tomato"></i>
+                                        <h3 class="cta-five__content__list__title">Tomato</h3><span>The majority have suffered alteration</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-end wow fadeInRight" data-wow-delay="200ms">
+                            <div class="cta-five__image">
+                                <img src="{% static 'images/resources/cta-5-1.jpg' %}" alt="alefox">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.cta-five -->
+
+
+        <section class="cta-four">
+            <div class="cta-four__bg jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% -100%" style="background-image: url(assets/images/backgrounds/cta-four-bg-1.jpg);"></div>
+            <!-- /.cta-four__bg -->
+            <div class="container wow fadeInUp">
+                <h5 class="cta-four__sub-title">Timeline Added</h5>
+                <h2 class="cta-four__title">We Food Leader <span>40%</span> Off Time<br> Agriculture Market</h2>
+                <ul class="countdown-one__list cta-four__countdown list-unstyled" data-leading-zeros="true" data-enable-days="true" data-deadline-date="dynamicDate"></ul>
+                <!-- /.countdown-one__list list-unstyled -->
+                <a href="products.html" class="alefox-btn">
+                    <span class="alefox-btn__item"></span>
+                    <span class="alefox-btn__item"></span>
+                    <span class="alefox-btn__item"></span>
+                    <span class="alefox-btn__item"></span>
+                    Discover More
+                </a>
+            </div>
+        </section>
+
+        <section class="project-two" id="project">
+            <div class="container">
+                <div class="sec-title text-center">
+
+                    <h6 class="sec-title__tagline bw-split-in-right"><span class="sec-title__tagline__left-leaf" style="background-image: url(assets/images/shapes/leaf.png);"></span>Our Projects<span class="sec-title__tagline__right-leaf" style="background-image: url(assets/images/shapes/leaf.png);"></span></h6><!-- /.sec-title__tagline -->
+
+                    <h3 class="sec-title__title bw-split-in-left">Explore This Projects</h3><!-- /.sec-title__title -->
+                </div><!-- /.sec-title -->
+                <div class="project-two__carousel alefox-owl__carousel alefox-owl__carousel--with-shadow alefox-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
+				"items": 1,
+				"margin": 30,
+				"loop": false,
+				"smartSpeed": 700,
+				"nav": false,
+				"navText": ["<span class=\"icofont-bubble-left\"></span>","<span class=\"icofont-bubble-righ\"></span>"],
+				"dots": true,
+				"autoplay": false,
+				"responsive": {
+					"0": {
+						"items": 1
+					},
+					"768": {
+						"items": 2
+					},
+					"1024": {
+						"items": 3
+					},
+					"1400": {
+						"items": 4
+					}
+				}
+			}'>
+                    <div class="item">
+                        <div class="project-two__item">
+                            <img src="{% static 'images/project/project-2-2.jpg' %}" alt="alefox">
+                            <div class="project-two__item__content">
+                                <p class="project-two__item__cats">Gardening</p>
+                                <h5 class="project-two__item__title"><a href="project-details.html">Lawn Care & Mowing</a></h5>
+                                <a href="project-details.html" class="project-two__item__rm">
+                                    <i class="icofont-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <div class="project-two__item">
+                            <img src="{% static 'images/project/project-2-3.jpg' %}" alt="alefox">
+                            <div class="project-two__item__content">
+                                <p class="project-two__item__cats">Gardening</p>
+                                <h5 class="project-two__item__title"><a href="project-details.html">Garden Design</a></h5>
+                                <a href="project-details.html" class="project-two__item__rm">
+                                    <i class="icofont-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <div class="project-two__item">
+                            <img src="{% static 'images/project/project-2-4.jpg' %}" alt="alefox">
+                            <div class="project-two__item__content">
+                                <p class="project-two__item__cats">Gardening</p>
+                                <h5 class="project-two__item__title"><a href="project-details.html">General Landscaping</a></h5>
+                                <a href="project-details.html" class="project-two__item__rm">
+                                    <i class="icofont-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <div class="project-two__item">
+                            <img src="{% static 'images/project/project-2-5.jpg' %}" alt="alefox">
+                            <div class="project-two__item__content">
+                                <p class="project-two__item__cats">Gardening</p>
+                                <h5 class="project-two__item__title"><a href="project-details.html">Tree Felling</a></h5>
+                                <a href="project-details.html" class="project-two__item__rm">
+                                    <i class="icofont-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <div class="project-two__item">
+                            <img src="{% static 'images/project/project-2-1.jpg' %}" alt="alefox">
+                            <div class="project-two__item__content">
+                                <p class="project-two__item__cats">Gardening</p>
+                                <h5 class="project-two__item__title"><a href="project-details.html">Garden Maintenance</a></h5>
+                                <a href="project-details.html" class="project-two__item__rm">
+                                    <i class="icofont-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!-- /.item -->
+                </div>
+            </div><!-- /.container -->
+        </section><!-- /.project-two -->
+
+        <section class="product-two">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 wow fadeInLeft">
+                        <div class="sec-title text-left">
+
+                            <h6 class="sec-title__tagline bw-split-in-right"><span class="sec-title__tagline__left-leaf" style="background-image: url(assets/images/shapes/leaf.png);"></span>Latest Arrivals<span class="sec-title__tagline__right-leaf" style="background-image: url(assets/images/shapes/leaf.png);"></span></h6><!-- /.sec-title__tagline -->
+
+                            <h3 class="sec-title__title bw-split-in-left">Products To Delivered </h3><!-- /.sec-title__title -->
+                        </div><!-- /.sec-title -->
+                    </div>
+                    <div class="col-md-4 wow fadeInRight" data-wow-delay="100ms">
+                        <div class="product-two__btn">
+                            <a href="products.html" class="alefox-btn">
+                                <span class="alefox-btn__item"></span>
+                                <span class="alefox-btn__item"></span>
+                                <span class="alefox-btn__item"></span>
+                                <span class="alefox-btn__item"></span>
+                                View All Products
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gutter-y-30">
+                    <div class="col-lg-6">
+                        <div class="product-two__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
+                            <div class="product-two__item__img">
+                                <img src="{% static 'images/products/product-1-1.png' %}" alt="alefox">
+
+                                <div class="product-two__item__flash">
+                                    <span class="product-two__item__flash__off">Sale</span>
+                                </div>
+
+                                <div class="product-two__item__btn">
+                                    <a href="cart.html"><i class="icon-shopping-cart"></i></a>
+                                    <a href="wishlist.html"><i class="far fa-heart"></i></a>
+                                    <a href="product-details.html"><i class="fas fa-eye"></i></a>
+                                </div>
+                            </div><!-- /.product-image -->
+                            <div class="product-two__item__content">
+                                <div class="product-two__item__cats">
+                                    <a href="products.html">Fruits</a>
+                                </div>
+                                <h4 class="product-two__item__title"><a href="product-details.html">Fresh Orange</a></h4><!-- /.product-title -->
+                                <div class="product-two__item__price">$10.00</div><!-- /.product-price -->
+                                <div class="product-two__item__ratings">
+                                    <span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span>
+                                </div><!-- /.product-ratings -->
+                            </div><!-- /.product-content -->
+                        </div><!-- /.product-item -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <div class="product-two__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='50ms'>
+                            <div class="product-two__item__img">
+                                <img src="{% static 'images/products/product-1-2.png' %}" alt="alefox">
+
+                                <div class="product-two__item__btn">
+                                    <a href="cart.html"><i class="icon-shopping-cart"></i></a>
+                                    <a href="wishlist.html"><i class="far fa-heart"></i></a>
+                                    <a href="product-details.html"><i class="fas fa-eye"></i></a>
+                                </div>
+                            </div><!-- /.product-image -->
+                            <div class="product-two__item__content">
+                                <div class="product-two__item__cats">
+                                    <a href="products.html">Vegetables</a>
+                                </div>
+                                <h4 class="product-two__item__title"><a href="product-details.html">Red Apple</a></h4><!-- /.product-title -->
+                                <div class="product-two__item__price">$11.00</div><!-- /.product-price -->
+                                <div class="product-two__item__ratings">
+                                    <span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span>
+                                </div><!-- /.product-ratings -->
+                            </div><!-- /.product-content -->
+                        </div><!-- /.product-item -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <div class="product-two__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
+                            <div class="product-two__item__img">
+                                <img src="{% static 'images/products/product-1-3.png' %}" alt="alefox">
+
+                                <div class="product-two__item__btn">
+                                    <a href="cart.html"><i class="icon-shopping-cart"></i></a>
+                                    <a href="wishlist.html"><i class="far fa-heart"></i></a>
+                                    <a href="product-details.html"><i class="fas fa-eye"></i></a>
+                                </div>
+                            </div><!-- /.product-image -->
+                            <div class="product-two__item__content">
+                                <div class="product-two__item__cats">
+                                    <a href="products.html">Salads</a>
+                                </div>
+                                <h4 class="product-two__item__title"><a href="product-details.html">Green Lemon</a></h4><!-- /.product-title -->
+                                <div class="product-two__item__price">$10.00</div><!-- /.product-price -->
+                                <div class="product-two__item__ratings">
+                                    <span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span>
+                                </div><!-- /.product-ratings -->
+                            </div><!-- /.product-content -->
+                        </div><!-- /.product-item -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <div class="product-two__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='150ms'>
+                            <div class="product-two__item__img">
+                                <img src="{% static 'images/products/product-1-4.png' %}" alt="alefox">
+
+                                <div class="product-two__item__flash">
+                                    <span class="product-two__item__flash__off">20% Off</span>
+                                </div>
+
+                                <div class="product-two__item__btn">
+                                    <a href="cart.html"><i class="icon-shopping-cart"></i></a>
+                                    <a href="wishlist.html"><i class="far fa-heart"></i></a>
+                                    <a href="product-details.html"><i class="fas fa-eye"></i></a>
+                                </div>
+                            </div><!-- /.product-image -->
+                            <div class="product-two__item__content">
+                                <div class="product-two__item__cats">
+                                    <a href="products.html">Beverage</a>
+                                </div>
+                                <h4 class="product-two__item__title"><a href="product-details.html">Organic Avocado</a></h4><!-- /.product-title -->
+                                <div class="product-two__item__price">$12.00</div><!-- /.product-price -->
+                                <div class="product-two__item__ratings">
+                                    <span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span>
+                                </div><!-- /.product-ratings -->
+                            </div><!-- /.product-content -->
+                        </div><!-- /.product-item -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <div class="product-two__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
+                            <div class="product-two__item__img">
+                                <img src="{% static 'images/products/product-1-5.png' %}" alt="alefox">
+
+                                <div class="product-two__item__flash">
+                                    <span class="product-two__item__flash__off">Sale</span>
+                                </div>
+
+                                <div class="product-two__item__btn">
+                                    <a href="cart.html"><i class="icon-shopping-cart"></i></a>
+                                    <a href="wishlist.html"><i class="far fa-heart"></i></a>
+                                    <a href="product-details.html"><i class="fas fa-eye"></i></a>
+                                </div>
+                            </div><!-- /.product-image -->
+                            <div class="product-two__item__content">
+                                <div class="product-two__item__cats">
+                                    <a href="products.html">Fruits</a>
+                                </div>
+                                <h4 class="product-two__item__title"><a href="product-details.html">Watermelon</a></h4><!-- /.product-title -->
+                                <div class="product-two__item__price">$10.00</div><!-- /.product-price -->
+                                <div class="product-two__item__ratings">
+                                    <span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span>
+                                </div><!-- /.product-ratings -->
+                            </div><!-- /.product-content -->
+                        </div><!-- /.product-item -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <div class="product-two__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='250ms'>
+                            <div class="product-two__item__img">
+                                <img src="{% static 'images/products/product-1-6.png' %}" alt="alefox">
+
+                                <div class="product-two__item__btn">
+                                    <a href="cart.html"><i class="icon-shopping-cart"></i></a>
+                                    <a href="wishlist.html"><i class="far fa-heart"></i></a>
+                                    <a href="product-details.html"><i class="fas fa-eye"></i></a>
+                                </div>
+                            </div><!-- /.product-image -->
+                            <div class="product-two__item__content">
+                                <div class="product-two__item__cats">
+                                    <a href="products.html">Grocery</a>
+                                </div>
+                                <h4 class="product-two__item__title"><a href="product-details.html">Rip Banana</a></h4><!-- /.product-title -->
+                                <div class="product-two__item__price">$11.00</div><!-- /.product-price -->
+                                <div class="product-two__item__ratings">
+                                    <span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span>
+                                </div><!-- /.product-ratings -->
+                            </div><!-- /.product-content -->
+                        </div><!-- /.product-item -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <div class="product-two__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+                            <div class="product-two__item__img">
+                                <img src="{% static 'images/products/product-1-7.png' %}" alt="alefox">
+
+                                <div class="product-two__item__btn">
+                                    <a href="cart.html"><i class="icon-shopping-cart"></i></a>
+                                    <a href="wishlist.html"><i class="far fa-heart"></i></a>
+                                    <a href="product-details.html"><i class="fas fa-eye"></i></a>
+                                </div>
+                            </div><!-- /.product-image -->
+                            <div class="product-two__item__content">
+                                <div class="product-two__item__cats">
+                                    <a href="products.html">Salads</a>
+                                </div>
+                                <h4 class="product-two__item__title"><a href="product-details.html">Strawberry</a></h4><!-- /.product-title -->
+                                <div class="product-two__item__price">$10.00</div><!-- /.product-price -->
+                                <div class="product-two__item__ratings">
+                                    <span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span>
+                                </div><!-- /.product-ratings -->
+                            </div><!-- /.product-content -->
+                        </div><!-- /.product-item -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <div class="product-two__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='350ms'>
+                            <div class="product-two__item__img">
+                                <img src="{% static 'images/products/product-1-8.png' %}" alt="alefox">
+
+                                <div class="product-two__item__flash">
+                                    <span class="product-two__item__flash__off">20% Off</span>
+                                </div>
+
+                                <div class="product-two__item__btn">
+                                    <a href="cart.html"><i class="icon-shopping-cart"></i></a>
+                                    <a href="wishlist.html"><i class="far fa-heart"></i></a>
+                                    <a href="product-details.html"><i class="fas fa-eye"></i></a>
+                                </div>
+                            </div><!-- /.product-image -->
+                            <div class="product-two__item__content">
+                                <div class="product-two__item__cats">
+                                    <a href="products.html">Grocery</a>
+                                </div>
+                                <h4 class="product-two__item__title"><a href="product-details.html">Red Mango</a></h4><!-- /.product-title -->
+                                <div class="product-two__item__price">$12.00</div><!-- /.product-price -->
+                                <div class="product-two__item__ratings">
+                                    <span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span><span class="icofont-star"></span>
+                                </div><!-- /.product-ratings -->
+                            </div><!-- /.product-content -->
+                        </div><!-- /.product-item -->
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.product-two -->
+
+        <section class="contact-two">
+            <div class="contact-two__bg" style="background-image: url(assets/images/backgrounds/contact-bg-2.jpg);"></div>
+            <div class="contact-two__shape" style="background-image: url(assets/images/shapes/contact-2-shape-1.png);"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-xl-5">
+                        <form class="contact-two__form contact-form-validated form-one wow fadeInUp" data-wow-duration="1500ms" action="https://bracketweb.com/alefox-html/inc/sendemail.php">
+                            <div class="sec-title text-center">
+
+                                <h6 class="sec-title__tagline bw-split-in-right"><span class="sec-title__tagline__left-leaf" style="background-image: url(assets/images/shapes/leaf.png);"></span>Contact Us<span class="sec-title__tagline__right-leaf" style="background-image: url(assets/images/shapes/leaf.png);"></span></h6><!-- /.sec-title__tagline -->
+
+                                <h3 class="sec-title__title bw-split-in-left">Get in Touch</h3><!-- /.sec-title__title -->
+                            </div><!-- /.sec-title -->
+                            <div class="form-one__group">
+                                <div class="form-one__control form-one__control--full">
+                                    <input type="text" name="name" placeholder="Name">
+                                </div><!-- /.form-one__control form-one__control--full -->
+                                <div class="form-one__control form-one__control--full">
+                                    <input type="email" name="email" placeholder="Email">
+                                </div><!-- /.form-one__control form-one__control--full -->
+                                <div class="form-one__control form-one__control--full">
+                                    <input type="text" name="address" placeholder="Address">
+                                </div><!-- /.form-one__control form-one__control--full -->
+                                <div class="form-one__control form-one__control--full">
+                                    <input type="text" name="phone" placeholder="Phone">
+                                </div><!-- /.form-one__control form-one__control--full -->
+                                <div class="form-one__control form-one__control--full">
+                                    <div class="form-one__control__select">
+                                        <label class="sr-only" for="service-select">Choose Service</label>
+                                        <!-- /#service-select.sr-only -->
+                                        <select class="selectpicker" id="service-select">
+                                            <option value="Select service">Choose Service</option>
+                                            <option value="Select service 01">Select Service 01</option>
+                                            <option value="Select service 02">Select Service 02</option>
+                                        </select>
+                                    </div><!-- /.main-menu__service -->
+                                </div><!-- /.form-one__control form-one__control--full -->
+                                <div class="form-one__control form-one__control--full">
+                                    <button type="submit" class="alefox-btn">
+                                        <span class="alefox-btn__item"></span>
+                                        <span class="alefox-btn__item"></span>
+                                        <span class="alefox-btn__item"></span>
+                                        <span class="alefox-btn__item"></span>
+                                        Send Request
+                                    </button>
+                                </div><!-- /.form-one__control -->
+                            </div><!-- /.form-one__group -->
+                        </form>
+                    </div>
+                    <div class="col-md-6 col-xl-7 d-flex align-items-center wow fadeInUp">
+                        <ul class="contact-two__list">
+                            <li class="contact-two__item">
+                                <div class="contact-two__item__icon"><span class="icon-phone-call"></span></div>
+                                <div class="contact-two__item__content">
+                                    <h3 class="contact-two__item__title">Call This Now</h3>
+                                    <p class="contact-two__item__text"><a href="tel:+044461556695">+044461556695</a></p>
+                                </div>
+                            </li><!-- item -->
+                            <li class="contact-two__item">
+                                <div class="contact-two__item__icon"><span class="icon-email"></span></div>
+                                <div class="contact-two__item__content">
+                                    <h3 class="contact-two__item__title">Your Message</h3>
+                                    <p class="contact-two__item__text"><a href="mailto:your@gmail.com">your@gmail.com</a></p>
+                                </div>
+                            </li><!-- item -->
+                            <li class="contact-two__item">
+                                <div class="contact-two__item__icon"><span class="icon-location"></span></div>
+                                <div class="contact-two__item__content">
+                                    <h3 class="contact-two__item__title">Your Location</h3>
+                                    <p class="contact-two__item__text">13/A, Miranda City</p>
+                                </div>
+                            </li><!-- item -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-map">
+            <div class="google-map__">
+                <iframe title="template google map" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd" 
+                class="map__" 
+                allowfullscreen>
+                </iframe>
+            </div>
+            <!-- /.google-map -->
+        </section><!-- /.contact-map -->
+
+        <section class="blog-one" id="blog">
+            <div class="container">
+                <div class="sec-title text-center">
+
+                    <h6 class="sec-title__tagline bw-split-in-right"><span class="sec-title__tagline__left-leaf" style="background-image: url(assets/images/shapes/leaf.png);"></span>From the Blog<span class="sec-title__tagline__right-leaf" style="background-image: url(assets/images/shapes/leaf.png);"></span></h6><!-- /.sec-title__tagline -->
+
+                    <h3 class="sec-title__title bw-split-in-left">Latest News & Articles</h3><!-- /.sec-title__title -->
+                </div><!-- /.sec-title -->
+                <div class="blog-one__carousel alefox-owl__carousel alefox-owl__carousel--with-shadow alefox-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
+				"items": 1,
+				"margin": 30,
+				"loop": false,
+				"smartSpeed": 700,
+				"nav": false,
+				"navText": ["<span class=\"icofont-bubble-left\"></span>","<span class=\"icofont-bubble-righ\"></span>"],
+				"dots": false,
+				"autoplay": false,
+				"responsive": {
+					"0": {
+						"items": 1
+					},
+					"768": {
+						"items": 2
+					},
+					"992": {
+						"items": 3
+					}
+				}
+			}'>
+                    <div class="item">
+                        <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
+                            <div class="blog-card__image">
+                                <img src="{% static 'images/blog/blog-1-1.jpg' %}" alt="This Leader in Organic Agriculture Growth">
+                                <img src="{% static 'images/blog/blog-1-1.jpg' %}" alt="This Leader in Organic Agriculture Growth">
+                                <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">This Leader in Organic Agriculture Growth</span>
+                                    <!-- /.sr-only --></a>
+                            </div><!-- /.blog-card__image -->
+                            <div class="blog-card__content">
+                                <ul class="list-unstyled blog-card__meta">
+                                    <li><i class="icofont-ui-user"></i>Admin: <a href="blog-list-right.html">Lorat</a></li>
+                                    <li><i class="icofont-comment"></i>Comments (5)</li>
+                                </ul><!-- /.list-unstyled blog-card__meta -->
+                                <h3 class="blog-card__title"><a href="blog-details-right.html">This Leader in Organic Agriculture Growth</a></h3><!-- /.blog-card__title -->
+                                <p class="blog-card__text">
+                                    We business standard chunk ofI nibh velit auctor aliquet sollic tudin.
+                                </p><!-- /.blog-card__text -->
+                                <a href="blog-details-right.html" class="blog-card__link">
+                                    <i class="icofont-arrow-right"></i>
+                                    Read more
+                                </a><!-- /.blog-card__link -->
+                            </div><!-- /.blog-card__content -->
+                        </div><!-- /.blog-card -->
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
+                            <div class="blog-card__image">
+                                <img src="{% static 'images/blog/blog-1-2.jpg' %}" alt="How to Findout Healthy Food For Body">
+                                <img src="{% static 'images/blog/blog-1-2.jpg' %}" alt="How to Findout Healthy Food For Body">
+                                <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">How to Findout Healthy Food For Body</span>
+                                    <!-- /.sr-only --></a>
+                            </div><!-- /.blog-card__image -->
+                            <div class="blog-card__content">
+                                <ul class="list-unstyled blog-card__meta">
+                                    <li><i class="icofont-ui-user"></i>Admin: <a href="blog-list-right.html">Lorat</a></li>
+                                    <li><i class="icofont-comment"></i>Comments (5)</li>
+                                </ul><!-- /.list-unstyled blog-card__meta -->
+                                <h3 class="blog-card__title"><a href="blog-details-right.html">How to Findout Healthy Food For Body</a></h3><!-- /.blog-card__title -->
+                                <p class="blog-card__text">
+                                    We business standard chunk ofI nibh velit auctor aliquet sollic tudin.
+                                </p><!-- /.blog-card__text -->
+                                <a href="blog-details-right.html" class="blog-card__link">
+                                    <i class="icofont-arrow-right"></i>
+                                    Read more
+                                </a><!-- /.blog-card__link -->
+                            </div><!-- /.blog-card__content -->
+                        </div><!-- /.blog-card -->
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
+                            <div class="blog-card__image">
+                                <img src="{% static 'images/blog/blog-1-3.jpg' %}" alt="We Are Ripening Fruits Healthy Blog">
+                                <img src="{% static 'images/blog/blog-1-3.jpg' %}" alt="We Are Ripening Fruits Healthy Blog">
+                                <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">We Are Ripening Fruits Healthy Blog</span>
+                                    <!-- /.sr-only --></a>
+                            </div><!-- /.blog-card__image -->
+                            <div class="blog-card__content">
+                                <ul class="list-unstyled blog-card__meta">
+                                    <li><i class="icofont-ui-user"></i>Admin: <a href="blog-list-right.html">Lorat</a></li>
+                                    <li><i class="icofont-comment"></i>Comments (5)</li>
+                                </ul><!-- /.list-unstyled blog-card__meta -->
+                                <h3 class="blog-card__title"><a href="blog-details-right.html">We Are Ripening Fruits Healthy Blog</a></h3><!-- /.blog-card__title -->
+                                <p class="blog-card__text">
+                                    We business standard chunk ofI nibh velit auctor aliquet sollic tudin.
+                                </p><!-- /.blog-card__text -->
+                                <a href="blog-details-right.html" class="blog-card__link">
+                                    <i class="icofont-arrow-right"></i>
+                                    Read more
+                                </a><!-- /.blog-card__link -->
+                            </div><!-- /.blog-card__content -->
+                        </div><!-- /.blog-card -->
+                    </div><!-- /.item -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.blog-one -->
+
+        <section class="cta-three">
+            <div class="cta-three__shape-left" style="background-image: url(assets/images/shapes/cta-3-1.png);"></div>
+            <div class="cta-three__shape-right" style="background-image: url(assets/images/shapes/cta-3-2.png);"></div>
+            <div class="container">
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-5 wow fadeInLeft" data-wow-delay="100ms">
+                        <div class="alefox-stretch-element-inside-column">
+                            <div class="cta-three__thumb">
+                                <img src="{% static 'images/resources/cta-3-1.png' %}" alt="alefox">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 wow fadeInRight" data-wow-delay="200ms">
+                        <div class="cta-three__content">
+                            <h3 class="cta-three__title">
+                                Steps In The Food Agriculture<br> Organic Services
+                            </h3>
+                            <p class="cta-three__text">
+                                We are the some preferred choice by many car owners because our experience<br> and is selfe vident.For your car we will do som everything
+                            </p>
+                            <a href="contact.html" class="alefox-btn">
+                                <span class="alefox-btn__item"></span>
+                                <span class="alefox-btn__item"></span>
+                                <span class="alefox-btn__item"></span>
+                                <span class="alefox-btn__item"></span>
+                                Discover More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.cta-three -->
+
+        <footer class="main-footer background-black">
+            <div class="main-footer__bg background-black" style="background-image: url(assets/images/backgrounds/footer-bg-1-1.jpg);"></div>
+            <!-- /.main-footer__bg -->
+            <div class="main-footer__top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-xl-4">
+                            <div class="footer-widget footer-widget--about">
+                                <a href="index.html" class="footer-widget__logo">
+                                    <img src="{% static 'images/logo-light.png' %}" width="147" alt="Alefox HTML Template">
+                                </a>
+                                <ul class="list-unstyled footer-widget__info">
+                                    <li>
+                                        <span class="footer-widget__info__icon"><i class="icofont-clock-time"></i></span>
+                                        Open Hours of Government: Mon - Fri: 8.00 am. - 6.00 pm.
+                                    </li>
+                                    <li>
+                                        <span class="footer-widget__info__icon"><i class="icofont-location-pin"></i></span>
+                                        13/A, Miranda Halim City .
+                                    </li>
+                                    <li>
+                                        <span class="footer-widget__info__icon"><i class="icofont-phone"></i></span>
+                                        <a href="tel:09969569535">099 695 695 35</a>
+                                    </li>
+                                </ul><!-- /.list-unstyled -->
+                                <div class="footer-widget__social">
+
+                                    <a href="https://facebook.com/">
+                                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                        <span class="sr-only">Facebook</span>
+                                    </a>
+                                    <a href="https://pinterest.com/">
+                                        <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+                                        <span class="sr-only">Pinterest</span>
+                                    </a>
+                                    <a href="https://twitter.com/">
+                                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                                        <span class="sr-only">Twitter</span>
+                                    </a>
+                                    <a href="https://instagram.com/">
+                                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                                        <span class="sr-only">Instagram</span>
+                                    </a>
+                                </div><!-- /.footer-widget__social -->
+                            </div><!-- /.footer-widget -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-6 col-xl-3">
+                            <div class="footer-widget footer-widget--links">
+                                <h2 class="footer-widget__title">Service</h2><!-- /.footer-widget__title -->
+                                <ul class="list-unstyled footer-widget__links">
+                                    <li><a href="service-d-fresh.html">Always Fresh</a></li>
+                                    <li><a href="service-d-organic.html">Organic Product</a></li>
+                                    <li><a href="service-d-agriculture.html">Agriculture Staff</a></li>
+                                    <li><a href="service-d-growth.html">Growth Providing</a></li>
+                                    <li><a href="service-d-farming.html">Organic Farming</a></li>
+                                </ul><!-- /.list-unstyled footer-widget__links -->
+                            </div>
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-6 col-xl-2">
+                            <div class="footer-widget footer-widget--links footer-widget--links-two">
+                                <h2 class="footer-widget__title">Links</h2><!-- /.footer-widget__title -->
+                                <ul class="list-unstyled footer-widget__links">
+                                    <li><a href="checkout.html">Cookie Policy</a></li>
+                                    <li><a href="products-right.html">Shop</a></li>
+                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="about.html">About us</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul><!-- /.list-unstyled footer-widget__links -->
+                            </div><!-- /.footer-widget -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-6 col-xl-3">
+                            <div class="footer-widget footer-widget--blog">
+                                <h5 class="footer-widget__title">Recent Posts</h5><!-- /.footer-widget__title -->
+                                <ul class="list-unstyled footer-widget__post">
+                                    <li>
+                                        <img src="{% static 'images/blog/w-1.jpg' %}" alt="alefox">
+                                        <span class="footer-widget__post__date">23 jun 2023</span>
+                                        <h6 class="footer-widget__post__title"><a href="blog-details-right.html">Organic Food for Healty life</a></h6>
+                                    </li>
+                                    <li>
+                                        <img src="{% static 'images/blog/w-2.jpg' %}" alt="alefox">
+                                        <span class="footer-widget__post__date">23 jun 2023</span>
+                                        <h6 class="footer-widget__post__title"><a href="blog-details-right.html">Success of Score for Farmer</a></h6>
+                                    </li>
+                                </ul>
+                            </div><!-- /.footer-widget -->
+                        </div><!-- /.col-md-6 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </div><!-- /.main-footer__top -->
+            <div class="main-footer__bottom">
+                <div class="container">
+                    <div class="main-footer__bottom__inner">
+                        <p class="main-footer__copyright">
+                            &copy; <span class="dynamic-year"></span>Angole.
+                        </p>
+                    </div><!-- /.main-footer__inner -->
+                </div><!-- /.container -->
+            </div><!-- /.main-footer__bottom -->
+        </footer><!-- /.main-footer -->
+
+    </div><!-- /.page-wrapper -->
+
+
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+            <div class="logo-box">
+                <a href="index.html" aria-label="logo image"><img src="{% static 'images/logo-light.png' %}" width="155" alt="" /></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:needhelp@alefox.com">needhelp@alefox.com</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:666-888-0000">666 888 0000</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__social">
+
+                <a href="https://facebook.com/">
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    <span class="sr-only">Facebook</span>
+                </a>
+                <a href="https://pinterest.com/">
+                    <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+                    <span class="sr-only">Pinterest</span>
+                </a>
+                <a href="https://twitter.com/">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                    <span class="sr-only">Twitter</span>
+                </a>
+                <a href="https://instagram.com/">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                    <span class="sr-only">Instagram</span>
+                </a>
+            </div><!-- /.mobile-nav__social -->
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <!-- /.search-popup__overlay -->
+        <div class="search-popup__content">
+            <form role="search" method="get" class="search-popup__form" action="#">
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" aria-label="search submit" class="alefox-btn">
+                    <span><i class="icon-magnifying-glass"></i></span>
+                </button>
+            </form>
+        </div>
+        <!-- /.search-popup__content -->
+    </div>
+    <!-- /.search-popup -->
+    <!-- Sidebar One Start -->
+    <aside class="sidebar-one">
+        <div class="sidebar-one__overlay"></div><!-- /.siderbar-ovarlay -->
+        <div class="sidebar-one__content">
+            <div class="sidebar-one__close"><i class="icofont-close-line"></i></div><!-- /.siderbar-close -->
+            <div class="sidebar-one__logo">
+                <a href="index.html" aria-label="logo image"><img src="{% static 'images/logo-light.png' %}" alt="Careox HTML" width="147"></a>
+            </div><!-- /.sidebar-one__logo-box -->
+            <p class="sidebar-one__text">
+                Mauris ut enim sit amet lacus ornare ullamcor. Praesent placerat nequ
+                puru rhoncu tincidunt odio ultrices. Sed feugiat feugiat felis.
+            </p>
+            <h4 class="sidebar-one__title">Contact Info:</h4>
+            <ul class="sidebar-one__info">
+                <li>
+                    <span class="fas fa-map-marker-alt"></span>
+                    85 Ketch Harbour RoadBensalem, PA 19020
+                </li>
+                <li>
+                    <span class="fas fa-envelope"></span>
+                    <a href="mailto:needhelp@company.com">willy@gmail.com</a>
+                </li>
+                <li>
+                    <span class="fas fa-phone-alt"></span>
+                    <a href="tel:09969569535">099 695 695 35</a>
+                </li>
+            </ul>
+            <div class="sidebar-one__social">
+
+                <a href="https://facebook.com/">
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    <span class="sr-only">Facebook</span>
+                </a>
+                <a href="https://pinterest.com/">
+                    <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+                    <span class="sr-only">Pinterest</span>
+                </a>
+                <a href="https://twitter.com/">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                    <span class="sr-only">Twitter</span>
+                </a>
+                <a href="https://instagram.com/">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                    <span class="sr-only">Instagram</span>
+                </a>
+            </div><!-- /sidebar-one__socila -->
+            <h4 class="sidebar-one__title">Newsletter:</h4>
+            <form action="#" data-url="MAILCHIMP_FORM_URL" class="sidebar-one__newsletter mc-form">
+                <input type="text" name="EMAIL" placeholder="Email address">
+                <button type="submit" class="fas fa-paper-plane">
+                    <span class="sr-only">submit</span><!-- /.sr-only -->
+                </button>
+            </form><!-- /.footer-widget__newsletter mc-form -->
+        </div><!-- /.sidebar__content -->
+    </aside>
+    <!-- Sidebar One Start -->
+
+    <!-- back-to-top-start -->
+    <a href="#" class="scroll-top">
+        <svg class="scroll-top__circle" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </a>
+    <!-- back-to-top-end -->
+
+
+    <script src="{% static 'vendors/jquery/jquery-3.7.0.min.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap-select/bootstrap-select.min.js' %}"></script>
+    <script src="{% static 'vendors/jarallax/jarallax.min.js' %}"></script>
+    <script src="{% static 'vendors/jquery-ui/jquery-ui.js' %}"></script>
+    <script src="{% static 'vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'vendors/jquery-appear/jquery.appear.min.js' %}"></script>
+    <script src="{% static 'vendors/jquery-circle-progress/jquery.circle-progress.min.js' %}"></script>
+    <script src="{% static 'vendors/jquery-magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'vendors/jquery-validate/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'vendors/nouislider/nouislider.min.js' %}"></script>
+    <script src="{% static 'vendors/tiny-slider/tiny-slider.js' %}"></script>
+    <script src="{% static 'vendors/wnumb/wNumb.min.js' %}"></script>
+    <script src="{% static 'vendors/owl-carousel/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'vendors/wow/wow.js' %}"></script>
+    <script src="{% static 'vendors/imagesloaded/imagesloaded.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/isotope/isotope.js' %}"></script>
+    <script src="{% static 'vendors/slick/slick.min.js' %}"></script>
+    <script src="{% static 'vendors/countdown/countdown.min.js' %}"></script>
+    <script src="{% static 'vendors/jquery-circleType/jquery.circleType.js' %}"></script>
+    <script src="{% static 'vendors/jquery-lettering/jquery.lettering.min.js' %}"></script>
+    <script src="{% static 'vendors/progress-bar/knob.js' %}"></script>
+    <!-- gsap js -->
+    <script src="{% static 'vendors/gsap/gsap.js' %}"></script>
+    <script src="{% static 'vendors/gsap/scrolltrigger.min.js' %}"></script>
+    <script src="{% static 'vendors/gsap/splittext.min.js' %}"></script>
+    <script src="{% static 'vendors/gsap/alefox-split.js' %}"></script>
+    <!-- template js -->
+    <script src="{% static 'js/alefox.js' %}"></script>
+</body>
+
+</html>

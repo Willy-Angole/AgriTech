@@ -18,4 +18,7 @@ urlpatterns = [
     path('predictiontomato/', views.predictiontomato, name='predictiontomato'),
     path('crop_recommendation/', views.crop_recommendation, name='crop_recommendation'),
     path('load_img/', views.load_img, name='load_img'),
+    path('packages/', views.packages, name='packages'),
+    path('404/', views.not_found, name='not_found'),
+    path('scan-image/', views.scan_image, name='scan_image'),
 ]
