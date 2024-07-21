@@ -2,8 +2,10 @@ from django.shortcuts import render
 from .forms import ImageUploadForm
 from django.http import HttpResponse
 import os
+import tensorflow as tf
 import cv2
 import numpy as np
+from tensorflow.keras.preprocessing.image import img_to_array, load_img
 from keras.models import load_model
 import pickle
 from django.conf import settings
@@ -230,28 +232,37 @@ def crop_recommendation(request):
     else:
         return render(request, 'crop_recommendation.html')
 
-def load_img(request):
-    global COUNT
-    return send_from_directory(settings.MEDIA_ROOT + '/img', "{}.jpg".format(COUNT-1))
+# def load_img(request):
+#     global COUNT
+#     return send_from_directory(settings.MEDIA_ROOT + '/img', "{}.jpg".format(COUNT-1))
 
 #image uploading
 
 def scan_image(request):
+    prediction = None
     if request.method == 'POST':
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():
-            # Process the uploaded image here
             image = form.cleaned_data['image']
-            # Example: pass the image to your model and get the result
-            result = process_image(image)
-            return render(request, 'result.html', {'result': result})
+            image_path = os.path.join(settings.MEDIA_ROOT, image.name)
+            
+            with open(image_path, 'wb+') as destination:
+                for chunk in image.chunks():
+                    destination.write(chunk)
+            
+            # Load and preprocess the image
+            img = load_img(image_path, target_size=(224, 224))  # Adjust target_size as needed
+            img_array = img_to_array(img)
+            img_array = np.expand_dims(img_array, axis=0)
+
+            # Make prediction
+            predictions = model_corn.predict(img_array)
+            class_names = ['Blight', 'Common Rust', 'Gray Leaf Spot', 'Healthy']
+            prediction = class_names[np.argmax(predictions)]
+            
     else:
         form = ImageUploadForm()
-    return render(request, 'upload_image.html', {'form': form})
 
-def process_image(image):
-    # Add your image processing logic here
-    # For example, load the image with OpenCV and pass it to your model
-    return "Disease identified: Example Disease"
+    return render(request, 'upload_image.html', {'form': form, 'prediction': prediction})
 
 

@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .views import scan_image
 
 urlpatterns = [
     path('', views.home, name='home'),
