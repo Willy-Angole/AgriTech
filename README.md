@@ -38,9 +38,11 @@ python -m venv venv
 You can use commands below to create virtual environment use pip(paste gitbash, cmd or terminal)
 
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+
 python get-pip.py
 
 pip install virtualenv
+
 virtualenv venv
 
 
