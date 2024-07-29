@@ -7,18 +7,17 @@ import cv2
 import numpy as np
 from tensorflow.keras.preprocessing.image import img_to_array, load_img
 from keras.models import load_model
-import pickle
 from django.conf import settings
 import joblib
 
 # Load models
-MODEL_PATH = os.path.join(settings.BASE_DIR, "detection", "models")
+# MODEL_PATH = os.path.join(settings.BASE_DIR, "detection", "models")
 
-model_corn = load_model(os.path.join(MODEL_PATH, 'AG_Corn_Plant_VGG19 .h5'))
-model_cotton = load_model(os.path.join(MODEL_PATH, 'AG_COTTON_plant_VGG19.h5'))
-model_grape = load_model(os.path.join(MODEL_PATH, 'AI_Grape.h5'))
-model_potato = load_model(os.path.join(MODEL_PATH, 'AI_Potato_VGG19.h5'))
-model_tomato = load_model(os.path.join(MODEL_PATH, 'AI_Tomato_model_inception.h5'))
+# model_corn = load_model(os.path.join(MODEL_PATH, 'AG_Corn_Plant_VGG19 .h5'))
+# model_cotton = load_model(os.path.join(MODEL_PATH, 'AG_COTTON_plant_VGG19.h5'))
+# model_grape = load_model(os.path.join(MODEL_PATH, 'AI_Grape.h5'))
+# model_potato = load_model(os.path.join(MODEL_PATH, 'AI_Potato_VGG19.h5'))
+# model_tomato = load_model(os.path.join(MODEL_PATH, 'AI_Tomato_model_inception.h5'))
 
 COUNT = 0
 
@@ -32,23 +31,23 @@ def packages(request):
 def not_found(request):
     return render(request, '404.html')
 
-def inputcotton(request):
-    return render(request, 'prediction_cotton.html')
+# def inputcotton(request):
+#     return render(request, 'prediction_cotton.html')
 
-def inputcorn(request):
-    return render(request, 'upload_image.html')
+# def inputcorn(request):
+#     return render(request, 'upload_image.html')
 
-def inputgrape(request):
-    return render(request, 'prediction_Grape.html')
+# def inputgrape(request):
+#     return render(request, 'prediction_Grape.html')
 
-def inputpotato(request):
-    return render(request, 'prediction_potato.html')
+# def inputpotato(request):
+#     return render(request, 'prediction_potato.html')
 
-def inputtomato(request):
-    return render(request, 'prediction_tomato.html')
+# def inputtomato(request):
+#     return render(request, 'prediction_tomato.html')
 
-def input_crop_recommendation(request):
-    return render(request, 'crop_recomdation.html')
+# def input_crop_recommendation(request):
+#     return render(request, 'crop_recomdation.html')
 
 def submit(request):
     if request.method == 'POST':
@@ -69,168 +68,168 @@ def submit(request):
     else:
         return render(request, 'index.html')
 
-def predictioncotton(request):
-    global COUNT
-    if request.method == 'POST':
-        img = request.FILES['image']
-        img_path = os.path.join(settings.MEDIA_ROOT, 'img', f'{COUNT}.jpg')
-        with open(img_path, 'wb+') as destination:
-            for chunk in img.chunks():
-                destination.write(chunk)
+# def predictioncotton(request):
+#     global COUNT
+#     if request.method == 'POST':
+#         img = request.FILES['image']
+#         img_path = os.path.join(settings.MEDIA_ROOT, 'img', f'{COUNT}.jpg')
+#         with open(img_path, 'wb+') as destination:
+#             for chunk in img.chunks():
+#                 destination.write(chunk)
         
-        img_arr = cv2.imread(img_path)
-        img_arr = cv2.resize(img_arr, (224, 224))
-        img_arr = img_arr / 255.0
-        img_arr = img_arr.reshape(1, 224, 224, 3)
-        predictions = model_cotton.predict(img_arr)
-        prediction = np.argmax(predictions, axis=1)
-        print(prediction[0])
+#         img_arr = cv2.imread(img_path)
+#         img_arr = cv2.resize(img_arr, (224, 224))
+#         img_arr = img_arr / 255.0
+#         img_arr = img_arr.reshape(1, 224, 224, 3)
+#         predictions = model_cotton.predict(img_arr)
+#         prediction = np.argmax(predictions, axis=1)
+#         print(prediction[0])
         
-        COUNT += 1
-        if prediction[0] == 0:
-            return render(request, 'Output.html', {'data': ["diseased cotton leaf", 'green']})
-        elif prediction[0] == 1:
-            return render(request, 'Output.html', {'data': ["diseased cotton plant", 'red']})
-        elif prediction[0] == 2:
-            return render(request, 'Output.html', {'data': ["fresh cotton leaf", 'red']})
-        else:
-            return render(request, 'Output.html', {'data': ["fresh cotton plant", 'red']})
+#         COUNT += 1
+#         if prediction[0] == 0:
+#             return render(request, 'Output.html', {'data': ["diseased cotton leaf", 'green']})
+#         elif prediction[0] == 1:
+#             return render(request, 'Output.html', {'data': ["diseased cotton plant", 'red']})
+#         elif prediction[0] == 2:
+#             return render(request, 'Output.html', {'data': ["fresh cotton leaf", 'red']})
+#         else:
+#             return render(request, 'Output.html', {'data': ["fresh cotton plant", 'red']})
 
 # Similarly update other prediction functions (predictioncorn, predictiongrape, predictionpotato, predictiontomato)
-def predictioncorn(request):
-    global COUNT
-    if request.method == 'POST':
-        img = request.FILES['image']
-        img_path = os.path.join(settings.MEDIA_ROOT, 'img', f'{COUNT}.jpg')
-        with open(img_path, 'wb+') as destination:
-            for chunk in img.chunks():
-                destination.write(chunk)
+# def predictioncorn(request):
+#     global COUNT
+#     if request.method == 'POST':
+#         img = request.FILES['image']
+#         img_path = os.path.join(settings.MEDIA_ROOT, 'img', f'{COUNT}.jpg')
+#         with open(img_path, 'wb+') as destination:
+#             for chunk in img.chunks():
+#                 destination.write(chunk)
         
-        img_arr = cv2.imread(img_path)
-        img_arr = cv2.resize(img_arr, (224, 224))
-        img_arr = img_arr / 255.0
-        img_arr = img_arr.reshape(1, 224, 224, 3)
-        predictions = model_cotton.predict(img_arr)
-        prediction = np.argmax(predictions, axis=1)
-        print(prediction[0])
+#         img_arr = cv2.imread(img_path)
+#         img_arr = cv2.resize(img_arr, (224, 224))
+#         img_arr = img_arr / 255.0
+#         img_arr = img_arr.reshape(1, 224, 224, 3)
+#         predictions = model_cotton.predict(img_arr)
+#         prediction = np.argmax(predictions, axis=1)
+#         print(prediction[0])
         
-        COUNT += 1
-        if prediction[0] == 0:
-            return render(request, 'Output.html', {'data': ["diseased cotton leaf", 'green']})
-        elif prediction[0] == 1:
-            return render(request, 'Output.html', {'data': ["diseased cotton plant", 'red']})
-        elif prediction[0] == 2:
-            return render(request, 'Output.html', {'data': ["fresh cotton leaf", 'red']})
-        else:
-            return render(request, 'Output.html', {'data': ["fresh cotton plant", 'red']})
+#         COUNT += 1
+#         if prediction[0] == 0:
+#             return render(request, 'Output.html', {'data': ["diseased cotton leaf", 'green']})
+#         elif prediction[0] == 1:
+#             return render(request, 'Output.html', {'data': ["diseased cotton plant", 'red']})
+#         elif prediction[0] == 2:
+#             return render(request, 'Output.html', {'data': ["fresh cotton leaf", 'red']})
+#         else:
+#             return render(request, 'Output.html', {'data': ["fresh cotton plant", 'red']})
 
 
 ## 2
-def predictiongrape(request):
-    global COUNT
-    if request.method == 'POST':
-        img = request.FILES['image']
-        img_path = os.path.join(settings.MEDIA_ROOT, 'img', f'{COUNT}.jpg')
-        with open(img_path, 'wb+') as destination:
-            for chunk in img.chunks():
-                destination.write(chunk)
+# def predictiongrape(request):
+#     global COUNT
+#     if request.method == 'POST':
+#         img = request.FILES['image']
+#         img_path = os.path.join(settings.MEDIA_ROOT, 'img', f'{COUNT}.jpg')
+#         with open(img_path, 'wb+') as destination:
+#             for chunk in img.chunks():
+#                 destination.write(chunk)
         
-        img_arr = cv2.imread(img_path)
-        img_arr = cv2.resize(img_arr, (224, 224))
-        img_arr = img_arr / 255.0
-        img_arr = img_arr.reshape(1, 224, 224, 3)
-        predictions = model_cotton.predict(img_arr)
-        prediction = np.argmax(predictions, axis=1)
-        print(prediction[0])
+#         img_arr = cv2.imread(img_path)
+#         img_arr = cv2.resize(img_arr, (224, 224))
+#         img_arr = img_arr / 255.0
+#         img_arr = img_arr.reshape(1, 224, 224, 3)
+#         predictions = model_cotton.predict(img_arr)
+#         prediction = np.argmax(predictions, axis=1)
+#         print(prediction[0])
         
-        COUNT += 1
-        if prediction[0] == 0:
-            return render(request, 'Output.html', {'data': ["diseased cotton leaf", 'green']})
-        elif prediction[0] == 1:
-            return render(request, 'Output.html', {'data': ["diseased cotton plant", 'red']})
-        elif prediction[0] == 2:
-            return render(request, 'Output.html', {'data': ["fresh cotton leaf", 'red']})
-        else:
-            return render(request, 'Output.html', {'data': ["fresh cotton plant", 'red']})
+#         COUNT += 1
+#         if prediction[0] == 0:
+#             return render(request, 'Output.html', {'data': ["diseased cotton leaf", 'green']})
+#         elif prediction[0] == 1:
+#             return render(request, 'Output.html', {'data': ["diseased cotton plant", 'red']})
+#         elif prediction[0] == 2:
+#             return render(request, 'Output.html', {'data': ["fresh cotton leaf", 'red']})
+#         else:
+#             return render(request, 'Output.html', {'data': ["fresh cotton plant", 'red']})
         
 #3
-def predictionpotato(request):
-    global COUNT
-    if request.method == 'POST':
-        img = request.FILES['image']
-        img_path = os.path.join(settings.MEDIA_ROOT, 'img', f'{COUNT}.jpg')
-        with open(img_path, 'wb+') as destination:
-            for chunk in img.chunks():
-                destination.write(chunk)
+# def predictionpotato(request):
+#     global COUNT
+#     if request.method == 'POST':
+#         img = request.FILES['image']
+#         img_path = os.path.join(settings.MEDIA_ROOT, 'img', f'{COUNT}.jpg')
+#         with open(img_path, 'wb+') as destination:
+#             for chunk in img.chunks():
+#                 destination.write(chunk)
         
-        img_arr = cv2.imread(img_path)
-        img_arr = cv2.resize(img_arr, (224, 224))
-        img_arr = img_arr / 255.0
-        img_arr = img_arr.reshape(1, 224, 224, 3)
-        predictions = model_cotton.predict(img_arr)
-        prediction = np.argmax(predictions, axis=1)
-        print(prediction[0])
+#         img_arr = cv2.imread(img_path)
+#         img_arr = cv2.resize(img_arr, (224, 224))
+#         img_arr = img_arr / 255.0
+#         img_arr = img_arr.reshape(1, 224, 224, 3)
+#         predictions = model_cotton.predict(img_arr)
+#         prediction = np.argmax(predictions, axis=1)
+#         print(prediction[0])
         
-        COUNT += 1
-        if prediction[0] == 0:
-            return render(request, 'Output.html', {'data': ["diseased cotton leaf", 'green']})
-        elif prediction[0] == 1:
-            return render(request, 'Output.html', {'data': ["diseased cotton plant", 'red']})
-        elif prediction[0] == 2:
-            return render(request, 'Output.html', {'data': ["fresh cotton leaf", 'red']})
-        else:
-            return render(request, 'Output.html', {'data': ["fresh cotton plant", 'red']})
+#         COUNT += 1
+#         if prediction[0] == 0:
+#             return render(request, 'Output.html', {'data': ["diseased cotton leaf", 'green']})
+#         elif prediction[0] == 1:
+#             return render(request, 'Output.html', {'data': ["diseased cotton plant", 'red']})
+#         elif prediction[0] == 2:
+#             return render(request, 'Output.html', {'data': ["fresh cotton leaf", 'red']})
+#         else:
+#             return render(request, 'Output.html', {'data': ["fresh cotton plant", 'red']})
         
 #4
-def predictiontomato(request):
-    global COUNT
-    if request.method == 'POST':
-        img = request.FILES['image']
-        img_path = os.path.join(settings.MEDIA_ROOT, 'img', f'{COUNT}.jpg')
-        with open(img_path, 'wb+') as destination:
-            for chunk in img.chunks():
-                destination.write(chunk)
+# def predictiontomato(request):
+#     global COUNT
+#     if request.method == 'POST':
+#         img = request.FILES['image']
+#         img_path = os.path.join(settings.MEDIA_ROOT, 'img', f'{COUNT}.jpg')
+#         with open(img_path, 'wb+') as destination:
+#             for chunk in img.chunks():
+#                 destination.write(chunk)
         
-        img_arr = cv2.imread(img_path)
-        img_arr = cv2.resize(img_arr, (224, 224))
-        img_arr = img_arr / 255.0
-        img_arr = img_arr.reshape(1, 224, 224, 3)
-        predictions = model_cotton.predict(img_arr)
-        prediction = np.argmax(predictions, axis=1)
-        print(prediction[0])
+#         img_arr = cv2.imread(img_path)
+#         img_arr = cv2.resize(img_arr, (224, 224))
+#         img_arr = img_arr / 255.0
+#         img_arr = img_arr.reshape(1, 224, 224, 3)
+#         predictions = model_cotton.predict(img_arr)
+#         prediction = np.argmax(predictions, axis=1)
+#         print(prediction[0])
         
-        COUNT += 1
-        if prediction[0] == 0:
-            return render(request, 'Output.html', {'data': ["diseased cotton leaf", 'green']})
-        elif prediction[0] == 1:
-            return render(request, 'Output.html', {'data': ["diseased cotton plant", 'red']})
-        elif prediction[0] == 2:
-            return render(request, 'Output.html', {'data': ["fresh cotton leaf", 'red']})
-        else:
-            return render(request, 'Output.html', {'data': ["fresh cotton plant", 'red']})
+#         COUNT += 1
+#         if prediction[0] == 0:
+#             return render(request, 'Output.html', {'data': ["diseased cotton leaf", 'green']})
+#         elif prediction[0] == 1:
+#             return render(request, 'Output.html', {'data': ["diseased cotton plant", 'red']})
+#         elif prediction[0] == 2:
+#             return render(request, 'Output.html', {'data': ["fresh cotton leaf", 'red']})
+#         else:
+#             return render(request, 'Output.html', {'data': ["fresh cotton plant", 'red']})
         
 #crop recomendation
-def crop_recommendation(request):
-    if request.method == 'POST':
-        Nitrogen = float(request.POST['Nitrogen'])
-        Phosphorus = float(request.POST['Phosphorus'])
-        Potassium = float(request.POST['Potassium'])
-        temperature = float(request.POST['temperature'])
-        humidity = float(request.POST['humidity'])
-        rainfall = float(request.POST['rainfall'])
-        ph = float(request.POST['ph'])
+# def crop_recommendation(request):
+#     if request.method == 'POST':
+#         Nitrogen = float(request.POST['Nitrogen'])
+#         Phosphorus = float(request.POST['Phosphorus'])
+#         Potassium = float(request.POST['Potassium'])
+#         temperature = float(request.POST['temperature'])
+#         humidity = float(request.POST['humidity'])
+#         rainfall = float(request.POST['rainfall'])
+#         ph = float(request.POST['ph'])
 
-        print(Nitrogen, Phosphorus, Potassium, temperature, humidity, rainfall, ph)
+#         print(Nitrogen, Phosphorus, Potassium, temperature, humidity, rainfall, ph)
 
-        with open("Crop_Recomandation_RF.pkl", 'rb') as file:
-            Pickled_RF_Model = pickle.load(file)
-        result = Pickled_RF_Model.predict([[Nitrogen, Phosphorus, Potassium, temperature, humidity, ph, rainfall]])
-        crops = ["rice", "maize", "chickpea", "kidneybeans", "pigeonpeas", "mothbeans", "mungbean", "blackgram", "lentil",
-                 "pomegranate", "banana", "mango", "grapes", "watermelon", "muskmelon", "apple", "orange", "papaya",
-                 "coconut", "cotton", "jute", "coffee"]
-        return render(request, 'crop_recommendation.html', {'data': [crops[result[0]], 'green']})
-    else:
-        return render(request, 'crop_recommendation.html')
+#         with open("Crop_Recomandation_RF.pkl", 'rb') as file:
+#             Pickled_RF_Model = pickle.load(file)
+#         result = Pickled_RF_Model.predict([[Nitrogen, Phosphorus, Potassium, temperature, humidity, ph, rainfall]])
+#         crops = ["rice", "maize", "chickpea", "kidneybeans", "pigeonpeas", "mothbeans", "mungbean", "blackgram", "lentil",
+#                  "pomegranate", "banana", "mango", "grapes", "watermelon", "muskmelon", "apple", "orange", "papaya",
+#                  "coconut", "cotton", "jute", "coffee"]
+#         return render(request, 'crop_recommendation.html', {'data': [crops[result[0]], 'green']})
+#     else:
+#         return render(request, 'crop_recommendation.html')
 
 # def load_img(request):
 #     global COUNT
@@ -238,31 +237,31 @@ def crop_recommendation(request):
 
 #image uploading
 
-def scan_image(request):
-    prediction = None
-    if request.method == 'POST':
-        form = ImageUploadForm(request.POST, request.FILES)
-        if form.is_valid():
-            image = form.cleaned_data['image']
-            image_path = os.path.join(settings.MEDIA_ROOT, image.name)
+# def scan_image(request):
+#     prediction = None
+#     if request.method == 'POST':
+#         form = ImageUploadForm(request.POST, request.FILES)
+#         if form.is_valid():
+#             image = form.cleaned_data['image']
+#             image_path = os.path.join(settings.MEDIA_ROOT, image.name)
             
-            with open(image_path, 'wb+') as destination:
-                for chunk in image.chunks():
-                    destination.write(chunk)
+#             with open(image_path, 'wb+') as destination:
+#                 for chunk in image.chunks():
+#                     destination.write(chunk)
             
-            # Load and preprocess the image
-            img = load_img(image_path, target_size=(224, 224))  # Adjust target_size as needed
-            img_array = img_to_array(img)
-            img_array = np.expand_dims(img_array, axis=0)
+#             # Load and preprocess the image
+#             img = load_img(image_path, target_size=(224, 224))  # Adjust target_size as needed
+#             img_array = img_to_array(img)
+#             img_array = np.expand_dims(img_array, axis=0)
 
-            # Make prediction
-            predictions = model_corn.predict(img_array)
-            class_names = ['Blight', 'Common Rust', 'Gray Leaf Spot', 'Healthy']
-            prediction = class_names[np.argmax(predictions)]
+#             # Make prediction
+#             predictions = model_corn.predict(img_array)
+#             class_names = ['Blight', 'Common Rust', 'Gray Leaf Spot', 'Healthy']
+#             prediction = class_names[np.argmax(predictions)]
             
-    else:
-        form = ImageUploadForm()
+#     else:
+#         form = ImageUploadForm()
 
-    return render(request, 'upload_image.html', {'form': form, 'prediction': prediction})
+#     return render(request, 'upload_image.html', {'form': form, 'prediction': prediction})
 
 
